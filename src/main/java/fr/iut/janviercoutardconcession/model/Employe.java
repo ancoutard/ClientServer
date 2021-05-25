@@ -12,11 +12,11 @@ public class Employe {
 
   public String prenom;
 
-  public ArrayList<VoitureVendue> voituresVendues;
+  public List<VoitureVendue> voituresVendues;
 
   public Employe() {}
 
-  public Employe(String nom, String prenom, ArrayList<VoitureVendue> voituresVendues){
+  public Employe(String nom, String prenom, List<VoitureVendue> voituresVendues){
       this.nom = nom;
       this.prenom = prenom;
       this.voituresVendues = voituresVendues;

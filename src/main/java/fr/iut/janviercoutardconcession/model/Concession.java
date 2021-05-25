@@ -9,9 +9,9 @@ public class Concession {
 
     public String nom;
 
-    public ArrayList<Voiture> voitures;
+    public List<Voiture> voitures;
 
-    public ArrayList<Employe> employes;
+    public List<Employe> employes;
 
     public Concession() {}
 

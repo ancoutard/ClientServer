@@ -4,9 +4,6 @@ import org.springframework.data.annotation.Id;
 import java.util.*;
 
 public class VoitureVendue extends Voiture{
-    @Id
-    public String id;
-
     public int prix;
 
     public VoitureVendue(){}

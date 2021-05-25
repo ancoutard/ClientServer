@@ -3,6 +3,8 @@ package fr.iut.janviercoutardconcession.controller;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.web.bind.annotation.*;
+import fr.iut.janviercoutardconcession.model.*;
+import fr.iut.janviercoutardconcession.repository.*;
 
 import java.util.List;
 
@@ -11,26 +13,26 @@ import java.util.List;
  * et une mise en situation de leurs cas d'usages.
  */
 @RestController
-public class EntityController {
+public class ConcessionController {
 
-    final MongoRepository<Object, ObjectId> repository;
+    final ConcessionRepository repository;
 
 
     /**
      * Spring fonctionne avec de l'injection de dépendances, pas d'annotation à rajouter dans les controller,
      * pas de new, il va s'en charger pour vous grâce à l'annotation présente sur cette classe.
      */
-    public EntityController(MongoRepository repository) { // Il vous faut une implem à vous pour que ça compile
+    public ConcessionController(ConcessionRepository repository) { // Il vous faut une implem à vous pour que ça compile
         this.repository = repository;
     }
 
-    @GetMapping("/entity")
-    public List<Object> list(@RequestParam(required = false) String name) {
+    @GetMapping("/getEntity")
+    public List<Concession> list(@RequestParam(required = false) String name) {
         return repository.findAll();
     }
 
-    @PostMapping("/entity")
-    public Object insert(@RequestBody Object entity) {
+    @PostMapping("/postEntity")
+    public Concession insert(@RequestBody Concession entity) {
         if (entity == null) {
             throw new CustomException("Must be not null");
         }
