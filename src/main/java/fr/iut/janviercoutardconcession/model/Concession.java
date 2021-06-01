@@ -9,15 +9,15 @@ public class Concession {
 
     public String nom;
 
-    public List<Voiture> voitures;
+    public List<Voiture> voitures_dispo;
 
     public List<Employe> employes;
 
     public Concession() {}
 
-    public Concession(String nom, List<Voiture> voitures, List<Employe> employes) {
+    public Concession(String nom, List<Voiture> voitures_dispo, List<Employe> employes) {
         this.nom = nom;
-        this.voitures = voitures;
+        this.voitures_dispo = voitures_dispo;
         this.employes = employes;
     }
 }

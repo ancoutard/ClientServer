@@ -8,13 +8,13 @@ public class Voiture {
     public String id;
 
     public String modele;
-
-    public String immatricualion;
+    
+    public String immatriculation;
 
     public Voiture(){}
 
-    public Voiture(String modele, String immatricualion){
+    public Voiture(String modele, String immatriculation){
         this.modele = modele;
-        this.immatricualion = immatricualion;
+        this.immatriculation = immatriculation;
     }
 }
