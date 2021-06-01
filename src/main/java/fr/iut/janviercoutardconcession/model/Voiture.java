@@ -4,9 +4,6 @@ import org.springframework.data.annotation.Id;
 import java.util.*;
 
 public class Voiture {
-    @Id
-    public String id;
-
     public String modele;
     
     public String immatriculation;

@@ -4,10 +4,6 @@ import java.util.*;
 import org.springframework.data.annotation.Id;
 
 public class Employe {
-
-  @Id
-  public String id;
-
   public String nom;
 
   public String prenom;
