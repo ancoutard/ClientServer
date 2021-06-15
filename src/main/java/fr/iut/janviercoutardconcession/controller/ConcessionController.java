@@ -7,6 +7,7 @@ import fr.iut.janviercoutardconcession.model.*;
 import fr.iut.janviercoutardconcession.repository.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Les Controller vont vous permettre une exposition rapide vos {@link org.springframework.data.mongodb.repository.MongoRepository}
@@ -26,17 +27,48 @@ public class ConcessionController {
         this.repository = repository;
     }
 
-    @GetMapping("/getEntity")
+    @GetMapping("/getConcession")
     public List<Concession> list(@RequestParam(required = false) String name) {
         return repository.findAll();
     }
+    
+    @GetMapping("/getConcessionByName")
+    public List<Concession> getConcessionByName(@RequestParam String nom) {
+        List<Concession> concessions = repository.findByTheConcessionName(nom);
+        if(concessions == null){
+            throw new CustomException("Aucune concession pour ce nom n'a été trouvé");
+        }
+        return concessions;
+    }
 
-    @PostMapping("/postEntity")
+    @PostMapping("/postConcession")
     public Concession insert(@RequestBody Concession entity) {
         if (entity == null) {
             throw new CustomException("Must be not null");
         }
         return repository.save(entity);
     }
+
+    @PutMapping("/putConcession")
+    public Concession modifierConcession(@RequestBody Concession concession){
+        System.out.println(concession.id);
+        Optional<Concession> concess = repository.findById(concession.id);
+        if(!concess.isPresent()){
+            throw new CustomException("Concession pas trouvé");
+        }
+        return repository.save(concession);
+    }
+
+    @DeleteMapping("/deleteConcession")
+    public String deleteConcession(@RequestParam String id){
+        Optional<Concession> concess = repository.findById(id);
+        if(!concess.isPresent()){
+            throw new CustomException("Concession pas trouvé");
+        }
+        repository.delete(concess.get());
+        return "Successful delete !";
+    }
+
+
 
 }
