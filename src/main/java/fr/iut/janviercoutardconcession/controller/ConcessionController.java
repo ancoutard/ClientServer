@@ -41,6 +41,15 @@ public class ConcessionController {
         return concessions;
     }
 
+    @GetMapping("/getAllVoituresVenduesByEmploye")
+    public List<ConcessionAggregate> getAllVoituresVenduesByEmploye() {
+        List<ConcessionAggregate> object = repository.findAllVoituresVenduesByEmployes();
+        if(object == null){
+            throw new CustomException("Problème");
+        }
+        return object;
+    }
+
     @PostMapping("/postConcession")
     public Concession insert(@RequestBody Concession entity) {
         if (entity == null) {
