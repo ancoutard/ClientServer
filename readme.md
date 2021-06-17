@@ -48,14 +48,17 @@ Méthodes de base déjà présentes dans vos repo qui implémentent l'interface 
 ## Nos services
 
 Notre application possède deux "points d'entrée" qui sont les services lié à la concession et à nos clients.
+</br>
 
 ### Concession :
+
+</br>
 
 On a un CRUD classique.
 
 </br>
 
-D'abord les GET :
+D'abord les <strong>GET</strong> :
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /getConcession
 
@@ -77,7 +80,7 @@ D'abord les GET :
 
 </br>
 
-Puis le POST :
+Puis le <strong>POST</strong> :
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /postConcession
 
@@ -87,7 +90,7 @@ Puis le POST :
 
 </br>
 
-Ensuite le PUT :
+Ensuite le <strong>PUT</strong> :
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /putConcession
 
@@ -97,7 +100,7 @@ Ensuite le PUT :
 
 </br>
 
-Pour finir le DELETE :
+Pour finir le <strong>DELETE</strong> :
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /deleteConcession
 
@@ -106,14 +109,17 @@ Pour finir le DELETE :
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession id en paramètre
 
 </br>
+</br>
 
 ### Client :
+
+</br>
 
 On a aussi un CRUD classique.
 
 </br>
 
-D'abord les GET :
+D'abord les <strong>GET</strong> :
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /getClients
 
@@ -129,7 +135,7 @@ D'abord les GET :
 
 </br>
 
-Puis le POST :
+Puis le <strong>POST</strong> :
 &nbsp;&nbsp;&nbsp;&nbsp;- /postClient
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Permet d'ajouter un client en base
@@ -138,7 +144,7 @@ Puis le POST :
 
 </br>
 
-Ensuite le PUT :
+Ensuite le <strong>PUT</strong> :
 &nbsp;&nbsp;&nbsp;&nbsp;- /putClient
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Modifie un client
@@ -147,7 +153,7 @@ Ensuite le PUT :
 
 </br>
 
-Pour finir le DELETE :
+Pour finir le <strong>DELETE</strong> :
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /deleteClient
 
