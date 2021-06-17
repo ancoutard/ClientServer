@@ -1,4 +1,4 @@
-# Squelette projet Client/Serveur
+<!-- # Squelette projet Client/Serveur
 
 
 ## Installation
@@ -16,22 +16,22 @@ Si vous n'êtes pas familier avec Maven, dans le fichier pom.xml à la racine du
 
 On commence par un peu de culture pour ceux qui sont intéressés à en apprendre plus sur [Maven](https://maven.apache.org/what-is-maven.html)
 
-#### SpringBoot MongoDB 
+#### SpringBoot MongoDB
 
 Méthodes de base déjà présentes dans vos repo qui implémentent l'interface __MongoRepository__:
 
-```java 
-  S save(S entity);      
+```java
+  S save(S entity);
 
-  Optional<T> findById(ID primaryKey); 
+  Optional<T> findById(ID primaryKey);
 
-  Iterable<T> findAll();               
+  Iterable<T> findAll();
 
-  long count();                        
+  long count();
 
-  void delete(T entity);               
+  void delete(T entity);
 
-  boolean existsById(ID primaryKey);   
+  boolean existsById(ID primaryKey);
 
 ```
 
@@ -41,4 +41,69 @@ Méthodes de base déjà présentes dans vos repo qui implémentent l'interface 
 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) -->
+
+# README Projet Client Serveur
+
+## Nos services
+
+Notre application possède deux "points d'entrée" qui sont les services lié à la concession et à nos clients.
+
+### Concession :
+
+On a un CRUD classique.
+
+D'abord les GET :
+&nbsp;&nbsp;&nbsp;&nbsp;- /getConcession
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Cela retourne toutes les concessions
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aucun paramètre
+
+&nbsp;&nbsp;&nbsp;&nbsp;- /getConcessionByName
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Cela retourne les concessions possédant les noms passés en paramètres
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un nom en paramètre
+
+&nbsp;&nbsp;&nbsp;&nbsp;- /getAllVoituresVenduesByEmploye
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Cela retourne le nombres de voitures vendu par employe
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aucun paramètre
+
+Puis le POST :
+&nbsp;&nbsp;&nbsp;&nbsp;- /postConcession
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Permet d'ajouter une concession en base
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession en paramètre
+
+Ensuite le PUT :
+&nbsp;&nbsp;&nbsp;&nbsp;- /putConcession
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Modifie une concession
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession en paramètre
+
+Pour finir le DELETE :
+&nbsp;&nbsp;&nbsp;&nbsp;- /deleteConcession
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Supprime une concession
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession id en paramètre
+
+### Client :
+
+On a aussi un CRUD classique.
+
+D'abord les GET :
+&nbsp;&nbsp;&nbsp;&nbsp;- /getClients
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Aucun paramètre
+&nbsp;&nbsp;&nbsp;&nbsp;- /getClientsById
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Prend un id en paramètre
+&nbsp;&nbsp;&nbsp;&nbsp;- /getClientsByName
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Prend un nom en paramètre
+
+Puis le POST :
+&nbsp;&nbsp;&nbsp;&nbsp;- /postClient
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Permet d'ajouter un client en base
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un client en paramètre
+
+Ensuite le PUT :
+&nbsp;&nbsp;&nbsp;&nbsp;- /putClient
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Modifie un client
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un client en paramètre
+
+Pour finir le DELETE :
+&nbsp;&nbsp;&nbsp;&nbsp;- /deleteClient
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Supprime un client
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un client id en paramètre
