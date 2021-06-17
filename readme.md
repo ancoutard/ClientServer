@@ -53,57 +53,104 @@ Notre application possède deux "points d'entrée" qui sont les services lié à
 
 On a un CRUD classique.
 
+</br>
+
 D'abord les GET :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /getConcession
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Cela retourne toutes les concessions
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aucun paramètre
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /getConcessionByName
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Cela retourne les concessions possédant les noms passés en paramètres
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un nom en paramètre
 
 &nbsp;&nbsp;&nbsp;&nbsp;- /getAllVoituresVenduesByEmploye
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Cela retourne le nombres de voitures vendu par employe
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aucun paramètre
 
+</br>
+
 Puis le POST :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /postConcession
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Permet d'ajouter une concession en base
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession en paramètre
+
+</br>
 
 Ensuite le PUT :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /putConcession
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Modifie une concession
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession en paramètre
 
+</br>
+
 Pour finir le DELETE :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /deleteConcession
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Supprime une concession
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend une concession id en paramètre
+
+</br>
 
 ### Client :
 
 On a aussi un CRUD classique.
 
+</br>
+
 D'abord les GET :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /getClients
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Aucun paramètre
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /getClientsById
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Prend un id en paramètre
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /getClientsByName
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Prend un nom en paramètre
+
+</br>
 
 Puis le POST :
 &nbsp;&nbsp;&nbsp;&nbsp;- /postClient
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Permet d'ajouter un client en base
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un client en paramètre
+
+</br>
 
 Ensuite le PUT :
 &nbsp;&nbsp;&nbsp;&nbsp;- /putClient
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Modifie un client
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un client en paramètre
 
+</br>
+
 Pour finir le DELETE :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /deleteClient
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Supprime un client
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prend un client id en paramètre
