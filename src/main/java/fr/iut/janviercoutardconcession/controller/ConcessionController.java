@@ -8,6 +8,7 @@ import fr.iut.janviercoutardconcession.repository.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Objects;
 
 /**
  * Les Controller vont vous permettre une exposition rapide vos {@link org.springframework.data.mongodb.repository.MongoRepository}
@@ -17,6 +18,7 @@ import java.util.Optional;
 public class ConcessionController {
 
     final ConcessionRepository repository;
+    private final int schema_version = 1;
 
 
     /**
@@ -29,7 +31,17 @@ public class ConcessionController {
 
     @GetMapping("/getConcession")
     public List<Concession> list(@RequestParam(required = false) String name) {
-        return repository.findAll();
+        List<Concession> liste = repository.findAll();
+        for(Concession concession : liste){
+            if(concession.schema_version != schema_version || Objects.isNull(concession.schema_version)){
+                concession.setNom(concession.nom);
+                concession.setVoitureDispo(concession.voitures_dispo);
+                concession.setEmployes(concession.employes);
+                concession.setSchemaVersion(schema_version);
+                break;
+            }   
+        }
+        return liste;
     }
     
     @GetMapping("/getConcessionByName")
@@ -37,6 +49,15 @@ public class ConcessionController {
         List<Concession> concessions = repository.findByTheConcessionName(nom);
         if(concessions == null){
             throw new CustomException("Aucune concession pour ce nom n'a été trouvé");
+        }
+        for(Concession concession : concessions){
+            if(concession.schema_version != schema_version || Objects.isNull(concession.schema_version)){
+                concession.setNom(concession.nom);
+                concession.setVoitureDispo(concession.voitures_dispo);
+                concession.setEmployes(concession.employes);
+                concession.setSchemaVersion(schema_version);
+                break;
+            }   
         }
         return concessions;
     }
@@ -52,6 +73,7 @@ public class ConcessionController {
 
     @PostMapping("/postConcession")
     public Concession insert(@RequestBody Concession entity) {
+        System.out.println(entity);
         if (entity == null) {
             throw new CustomException("Must be not null");
         }
