@@ -1,21 +1,35 @@
 package fr.iut.janviercoutardconcession.model;
 
-import org.springframework.data.annotation.Id;
 import java.util.*;
+import org.springframework.data.annotation.Id;
 
+/**
+ * Represents an employe and its list of sold cars.
+ */
 public class ConcessionAggregate {
-    @Id
-    public Employe employe;
 
-    public List<VoitureVendue> voitures_vendues;
+  /**
+   * Employe's id.
+   */
+  @Id
+  public Employe employe;
 
-    public int total_nb_voitures_vendues;
+  /**
+   * Employe's list of sold cars.
+   */
+  public List<VoitureVendue> voitures_vendues;
 
-    public ConcessionAggregate() {}
+  public int total_nb_voitures_vendues;
 
-    public ConcessionAggregate(Employe employe, List<VoitureVendue> voitures_vendues, int total_nb_voitures_vendues) {
-        this.employe = employe;
-        this.voitures_vendues = voitures_vendues;
-        this.total_nb_voitures_vendues = total_nb_voitures_vendues;
-    }
+  public ConcessionAggregate() {}
+
+  public ConcessionAggregate(
+    Employe employe,
+    List<VoitureVendue> voitures_vendues,
+    int total_nb_voitures_vendues
+  ) {
+    this.employe = employe;
+    this.voitures_vendues = voitures_vendues;
+    this.total_nb_voitures_vendues = total_nb_voitures_vendues;
+  }
 }

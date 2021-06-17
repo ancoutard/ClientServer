@@ -1,49 +1,97 @@
 package fr.iut.janviercoutardconcession.model;
 
-import org.springframework.data.annotation.Id;
 import java.util.*;
+import org.springframework.data.annotation.Id;
 
+/**
+ * Client entity.
+ */
 public class Client {
-    @Id
-    public String id;
 
-    public String nom;
+  /**
+   * Client's id.
+   */
+  @Id
+  public String id;
 
-    public String prenom;
+  /**
+   *   Clients's last name.
+   */
+  public String nom;
 
-    public List<Facture> factures;
+  /**
+   *   Clients's first name.
+   */
+  public String prenom;
 
-    public Date date_creation_compte;
+  /**
+   *   Clients's factures.
+   */
+  public List<Facture> factures;
 
-    public int schema_version;
+  /**
+   *   Clients's date of creation.
+   */
+  public Date date_creation_compte;
 
-    public Client() {}
+  public int schema_version;
 
-    public Client(String nom, String prenom, List<Facture> factures, Date date_creation_compte,  int schema_version) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.factures = factures;
-        this.date_creation_compte = date_creation_compte;
-        this.schema_version = schema_version;
-    }
+  public Client() {}
 
-    public void setNom(String nom){
-        this.nom = nom;
-    }
+  /**
+   *   Create a client.
+   * @param nom The clients’s last name.
+   * @param prenom The clients’s first name.
+   * @param factures The clients’s list of facture.
+   * @param date_creation_compte The clients’s date of creation.
+   */
+  public Client(
+    String nom,
+    String prenom,
+    List<Facture> factures,
+    Date date_creation_compte,
+    int schema_version
+  ) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.factures = factures;
+    this.date_creation_compte = date_creation_compte;
+    this.schema_version = schema_version;
+  }
 
-    public void setPrenom(String prenom){
-        this.prenom = prenom;
-    }
+  /**
+   *   Set the client's last name.
+   * @param nom The clients’s last name.
+   */
+  public void setNom(String nom) {
+    this.nom = nom;
+  }
 
-    public void setFactures(List<Facture> factures){
-        this.factures = factures;
-    }
+  /**
+   *   Set the client's first name.
+   * @param prenom The clients’s first name.
+   */
+  public void setPrenom(String prenom) {
+    this.prenom = prenom;
+  }
 
-    public void setDateCreationCompte(Date date_creation_compte){
-        this.date_creation_compte = date_creation_compte;
-    }
+  /**
+   *   Set the client's list of facture.
+   * @param factures The clients’s list of facture.
+   */
+  public void setFactures(List<Facture> factures) {
+    this.factures = factures;
+  }
 
-    public void setSchemaVersion(int schema_version){
-        this.schema_version = schema_version;
-    }
+  /**
+   *   Set the client's date of creation.
+   * @param date_creation_compte The clients’s date of creation.
+   */
+  public void setDateCreationCompte(Date date_creation_compte) {
+    this.date_creation_compte = date_creation_compte;
+  }
+
+  public void setSchemaVersion(int schema_version) {
+    this.schema_version = schema_version;
+  }
 }

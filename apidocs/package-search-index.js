@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"fr.iut.janviercoutardconcession"},{"l":"fr.iut.janviercoutardconcession.controller"},{"l":"fr.iut.janviercoutardconcession.controller.advice"},{"l":"fr.iut.janviercoutardconcession.model"},{"l":"fr.iut.janviercoutardconcession.repository"}]

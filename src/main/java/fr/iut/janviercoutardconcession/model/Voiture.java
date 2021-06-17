@@ -1,17 +1,32 @@
 package fr.iut.janviercoutardconcession.model;
 
-import org.springframework.data.annotation.Id;
 import java.util.*;
+import org.springframework.data.annotation.Id;
 
+/**
+ * Voiture entity.
+ */
 public class Voiture {
-    public String modele;
-    
-    public String immatriculation;
 
-    public Voiture(){}
+  /**
+   * Voiture's model.
+   */
+  public String modele;
 
-    public Voiture(String modele, String immatriculation){
-        this.modele = modele;
-        this.immatriculation = immatriculation;
-    }
+  /**
+   * Voiture's registration.
+   */
+  public String immatriculation;
+
+  public Voiture() {}
+
+  /**
+   * Creates a Voiture.
+   * @param modele Voiture's model.
+   * @param immatriculation Voiture's registration.
+   */
+  public Voiture(String modele, String immatriculation) {
+    this.modele = modele;
+    this.immatriculation = immatriculation;
+  }
 }
