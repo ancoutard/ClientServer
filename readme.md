@@ -45,6 +45,8 @@ Méthodes de base déjà présentes dans vos repo qui implémentent l'interface 
 
 # README Projet Client Serveur
 
+La javadoc se situe dans apidocs/index.html
+
 ## Nos services
 
 Notre application possède deux "points d'entrée" qui sont les services lié à la concession et à nos clients.
