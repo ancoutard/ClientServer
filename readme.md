@@ -136,6 +136,7 @@ D'abord les <strong>GET</strong> :
 </br>
 
 Puis le <strong>POST</strong> :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /postClient
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Permet d'ajouter un client en base
@@ -145,6 +146,7 @@ Puis le <strong>POST</strong> :
 </br>
 
 Ensuite le <strong>PUT</strong> :
+
 &nbsp;&nbsp;&nbsp;&nbsp;- /putClient
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => Modifie un client
