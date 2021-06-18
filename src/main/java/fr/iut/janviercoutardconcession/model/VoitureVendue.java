@@ -14,6 +14,11 @@ public class VoitureVendue extends Voiture {
    */
   public int prix_vente;
 
+  /**
+   * VoitureVendue's client.
+   */
+  public String client;
+
   public VoitureVendue() {}
 
   /**
@@ -21,9 +26,11 @@ public class VoitureVendue extends Voiture {
    * @param modele VoitureVendue's model.
    * @param immatriculation VoitureVendue's registration.
    * @param prix VoitureVendue's price.
+   * @param client VoitureVendue's client.
    */
-  public VoitureVendue(String modele, String immatriculaion, int prix) {
+  public VoitureVendue(String modele, String immatriculaion, int prix, String client) {
     super(modele, immatriculaion);
     this.prix_vente = prix_vente;
+    this.client = client;
   }
 }
